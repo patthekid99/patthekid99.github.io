@@ -1,6 +1,5 @@
 import  pitch1  from '../images/pitch-analyzer-1.PNG';
-import pitch2  from '../images/pitch-analyzer-2.PNG';
-import  pitch3  from '../images/pitch-analyzer-3.PNG';
+import pitch2  from '../images/pitch-analyzer-3.PNG';
 import pitchLogo from '../images/Major_League_Baseball_logo.png';
 import insta1 from '../images/instapat-1.PNG';
 import insta2 from '../images/instapat-2.PNG';
@@ -29,7 +28,7 @@ export const projects  = [
         logo: pitchLogo,
         image1: pitch1 ,
         image2: pitch2 ,
-        image3: pitch3 ,
+        image3: pitch1 ,
         linkToSite: "https://mlb-pitch-analyzer.herokuapp.com/",
         repo: "https://mlb-pitch-analyzer.herokuapp.com/"
 

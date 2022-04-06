@@ -68,7 +68,7 @@ const NavBar = () => {
                             {pages.map((page) => (
                                 <MenuItem key={page} onClick={handleCloseMobileNav}>
                                     <Typography textAlign='center'>
-                                        <Link style={{textDecoration: "none"}} to={`/${page}`}>
+                                        <Link style={{textDecoration: "none", textTransform: "uppercase"}} to={`/${page}`}>
                                             {page}
                                         </Link>
                                     </Typography>
