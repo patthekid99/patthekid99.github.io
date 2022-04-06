@@ -16,7 +16,7 @@ function ProjectPage() {
                     <h1>{p.title}</h1>
                     <p>{p.description}</p>
                     <p className='read-more'>
-                        <Link to={`/Projects/${p.id}`}>Read More</Link>
+                        <Link to={`/projects/${p.id}`}>Read More</Link>
                     </p>
                 </div>
             </div>
