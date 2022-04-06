@@ -1,6 +1,7 @@
 import Container from '@mui/material/Container';
 import '../styles/projects.scss';
 import { projects } from '../globals/projects';
+import { Link } from 'react-router-dom';
 
 function ProjectPage() {
     return (
@@ -15,7 +16,7 @@ function ProjectPage() {
                     <h1>{p.title}</h1>
                     <p>{p.description}</p>
                     <p className='read-more'>
-                        <a href={`/Projects/${p.id}`}>Read More</a>
+                        <Link to={`/Projects/${p.id}`}>Read More</Link>
                     </p>
                 </div>
             </div>
