@@ -27,6 +27,8 @@ function ContactPage() {
     errors: {} 
     })
 
+    const [submitted, setSubmitted] = useState(false)
+
     const handleOnChange = ({ target }) => {
         const { data, errors} = state
         target.value.length <= 3
@@ -38,6 +40,7 @@ function ContactPage() {
 
     const handleSubmit = (e) => {
         e.preventDefault()
+        setSubmitted(true)
         console.log("submitted, ", state.data)
     }
 
@@ -63,27 +66,27 @@ function ContactPage() {
                                         Interested in reaching out? Do not hesitate to submit the following form or visit the links in the footer below! 
                                     </ContactHeader>
                                 </Grid>
-
-                                <Grid item xs={12} sm={10} style={{ marginBottom: "16px" }}>
-                                    <TextInput label={'Name'} name={'name'} state={state} onChange={handleOnChange} />
-                                </Grid>
-                                
-                                <Grid item xs={12} sm={10} style={{ marginBottom: "16px" }}>
-                                    <TextInput label={'Email'} name={'email'} state={state} onChange={handleOnChange} />
-                                </Grid>
-                                
-                                <Grid item xs={12} sm={10} style={{ marginBottom: "16px" }}>
-                                    <TextInput label={'Message'} name={'message'} state={state} onChange={handleOnChange} multiline={true} rows={5} />
-                                </Grid>
-                                
-                                <Grid item xs={12} sm={8} style={{ marginBottom: "16px" }}>
-                                    <Button
-                                        variant="contained"
-                                        type='submit'
-                                        fullWidth={true}>
+                                {submitted === false ? 
+                                <>
+                                    <Grid item xs={12} sm={10} style={{ marginBottom: "16px" }}>
+                                        <TextInput label={'Name'} name={'name'} state={state} onChange={handleOnChange} />
+                                    </Grid>
+                                    <Grid item xs={12} sm={10} style={{ marginBottom: "16px" }}>
+                                        <TextInput label={'Email'} name={'email'} state={state} onChange={handleOnChange} />
+                                    </Grid>
+                                    <Grid item xs={12} sm={10} style={{ marginBottom: "16px" }}>
+                                        <TextInput label={'Message'} name={'message'} state={state} onChange={handleOnChange} multiline={true} rows={5} />
+                                    </Grid>
+                                    <Grid item xs={12} sm={8} style={{ marginBottom: "16px" }}>
+                                        <Button
+                                            variant="contained"
+                                            type='submit'
+                                            fullWidth={true}>
                                             Submit
-                                    </Button>
-                                </Grid>
+                                        </Button>
+                                    </Grid>
+                                </>
+                                : <Grid item xs={12} sm={10} style={{ marginBottom: "16px" }}><Typography>Thank you for the submission I look forward to responding soon!</Typography></Grid>}
                             </Grid>
                         </form>
                     </Grid>

@@ -32,7 +32,7 @@ export const projects = [
         image2: pitch2,
         image3: pitch3,
         linkToSite: "https://mlb-pitch-analyzer.herokuapp.com/",
-        repo: "https://mlb-pitch-analyzer.herokuapp.com/"
+        repo: "https://github.com/patthekid99/"
 
     },
     {
