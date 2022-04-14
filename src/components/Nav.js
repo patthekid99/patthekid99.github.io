@@ -28,13 +28,13 @@ const NavBar = () => {
         <AppBar position='static'>
             <Container maxWidth='xl'>
                 <Toolbar disableGutters>
-                    <Typography
+                <Typography
                         varient='h6'
                         noWrap
                         component='div'
                         sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}
                     >
-                        PATRICK'S PORTFOLIO
+                        PATRICK VAN DEN BRINK
                     </Typography>
                     <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
                         <IconButton
@@ -82,9 +82,9 @@ const NavBar = () => {
                         component="div"
                         sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
                     >
-                        PATRICK'S PORTFOLIO
+                        PATRICK VAN DEN BRINK
                     </Typography>
-                    <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+                    <Box sx={{ flexGrow: 0,  display: { xs: 'none', md: 'flex' } }}>
                         {pages.map((page) => (
                             <Button
                                 key={page}

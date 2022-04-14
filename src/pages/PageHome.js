@@ -1,6 +1,7 @@
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import { styled } from '@mui/material/styles';
+import { Container } from '@mui/material';
 
 const HeaderWrapper = styled(Box)(({ theme }) => ({
     width: "100%",
@@ -12,31 +13,43 @@ const HeaderWrapper = styled(Box)(({ theme }) => ({
 }))
 
 const HeaderContainer = styled(Box)(({ theme }) => ({
-    width: "85%",
-    minHeight: "90vh",
-    height: "auto",
-    padding: "20px",
-    display: "flex",
-    flexFlow: "column wrap",
-    justifyContent: "center",
-    fontFamily: "roboto",
+    display: 'flex',
+	flexDirection: 'column',
+    justifyContent: 'center',
+	minHeight: '90vh',
+	padding: '0 30px',
+	textAlign: 'center',
+
 }))
 
 const HeaderTitle = styled(Typography)(({ theme }) => ({
-    fontSize: "3rem",
+    fontSize: "3.75rem",
+    fontWeight: "600",
     margin: theme.spacing(1, 0),
-    [theme.breakpoints.down("xs")]: {
+    [theme.breakpoints.down("s")]: {
         fontSize: "2rem",
       },
 }))
 
 const HeaderDescription = styled(Typography)(({ theme}) => ({
     fontSize: "2rem",
-    color: 'white',
-    margin: theme.spacing(1, 0),
-    [theme.breakpoints.down("xs")]: {
+    color: "white",
+    fontWeight: '100',
+    margin: theme.spacing(2, 0),
+    [theme.breakpoints.down("s")]: {
       fontSize: "1rem",
-      margin: theme.spacing(2, 0),
+    },
+}))
+
+const HeaderDetails = styled(Typography)(({ theme}) => ({
+    fontSize: "1.5rem",
+    color: "white",
+    fontWeight: '100',
+    maxWidth: '960px',
+    margin: "auto",
+    [theme.breakpoints.down("s")]: {
+      fontSize: "0.5rem",
+      
     },
 }))
 
@@ -44,15 +57,24 @@ function HomePage() {
     return (
         <HeaderWrapper>
             <HeaderContainer>
-                <HeaderTitle variant='h3' component='h4'>
-                    Patrick van den Brink
+                <Container>
+                <div className='glass-contain'>
+                <HeaderTitle>
+                    Hello I'm Patrick van den Brink!
                 </HeaderTitle>
                 <HeaderDescription>
-                    Focused junior software developer with strong foundation in full stack web development and experience programming on various platforms.
-                    Skilled in identifying problem areas, recognizing the impact on the business and users, and prioritizing the implementation of appropriate solutions.
+                    Full Stack Developer | Sports Enthusiast | Avid Golfer
                 </HeaderDescription>
+                <HeaderDetails>
+                    I'm a focused junior software developer from Vancouver, Canada with a strong foundation in full stack web development and experience programming on various platforms. 
+                    I'm skilled in identifying problem areas, recognizing the impact on the business and users, and prioritizing the implementation of appropriate solutions. 
+                    Throughout my journey as a developer, I have earned a strong reputation for consistently meeting project deadlines.
+                </HeaderDetails>
+                </div>
+                </Container>
             </HeaderContainer>
         </HeaderWrapper>
+       
     )
 }
 

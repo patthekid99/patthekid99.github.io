@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 function ProjectPage() {
     return (
         <>
-        <Container>
+        <Container sx={{minHeight: "90vh"}}>
         {projects.map((p) => (
             <div key={p.id} className={p.id % 2 === 1 ? 'project-card': 'project-card alt'}>
                 <div className='meta'>
@@ -14,7 +14,7 @@ function ProjectPage() {
                 </div>
                 <div className='description'>
                     <h1>{p.title}</h1>
-                    <p>{p.description}</p>
+                    <p>{p.overview}</p>
                     <p className='read-more'>
                         <Link to={`/projects/${p.id}`}>Read More</Link>
                     </p>

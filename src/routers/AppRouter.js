@@ -8,10 +8,10 @@ function AppRouter() {
     return (
         <Routes>
             <Route path='/' element={<HomePage />} />
-            <Route path='/Home' element={<HomePage />} />
-            <Route path='/Projects' element={<ProjectPage />} />
-            <Route path='/Projects/:id' element={<ProjectDetails />} />
-            <Route path='/Contact' element={<ContactPage />} />           
+            <Route path='/home' element={<HomePage />} />
+            <Route path='/projects' element={<ProjectPage />} />
+            <Route path='/projects/:id' element={<ProjectDetails />} />
+            <Route path='/contact' element={<ContactPage />} />           
         </Routes>
     )
 }

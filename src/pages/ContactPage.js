@@ -10,8 +10,8 @@ import { useState } from 'react';
 
 const ContactWrapper = styled(Box)(({ theme }) => ({
     padding: theme.spacing(10, 0, 8, 0),
+    minHeight: "90vh"
 }))
-
 
 const ContactHeader = styled(Typography)(({ theme }) => ({
     margin: theme.spacing(1, 0),
@@ -43,7 +43,7 @@ function ContactPage() {
 
     return(
         <ContactWrapper>
-            <Container>
+            <Container >
                 <Grid container spacing={1}>
                     <Grid item sm={5}>
                         <Box >
@@ -60,7 +60,7 @@ function ContactPage() {
                             >
                                 <Grid item xs={12} sm={10} style={{ marginBottom: "16px" }}>
                                     <ContactHeader variant='h5' >                                
-                                        Interrested in reaching out? Do not hesiatate to submit the email form below! 
+                                        Interested in reaching out? Do not hesitate to submit the following form or visit the links in the footer below! 
                                     </ContactHeader>
                                 </Grid>
 

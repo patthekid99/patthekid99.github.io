@@ -17,14 +17,14 @@ function ProjectDetails() {
     const [project, setProject] = useState({title: '', technolgies: []})
 
     const settings = {
-        dots: true,
-        infinite: true,
-        arrows: false,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: true,
-        lazyLoad: true
+      dots: true,
+      infinite: true,
+      autoplay: true,
+      speed: 1000,
+      autoplaySpeed: 5000,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false
     }
 
     useEffect (() => {
@@ -48,16 +48,15 @@ function ProjectDetails() {
           </Button>
         <Slider {...settings}>
         <div className='slider-style'>
-          <div className='photo-slider' style={{ backgroundImage: `url(${project.image1})` }}></div>
+          <div className='photo-slider' style={{ backgroundImage: `url(${project.image1})`}}></div>
         </div>  
         <div className='slider-style'>
           <div className='photo-slider' style={{ backgroundImage: `url(${project.image2})` }}></div>
         </div>
         <div className='slider-style'>
           <div className='photo-slider' style={{ backgroundImage: `url(${project.image3})` }}></div>
-        </div>             
+        </div>        
         </Slider>
-
         <h3>Project Role</h3>
         <p>{project.role}</p>
         <h3>Technologies Used</h3>
